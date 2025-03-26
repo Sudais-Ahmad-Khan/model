@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+*{
+    padding: o;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Lora", serif;
+    display: grid;
+    max-width: 1920px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    background-color: #2b2b2b;
+    overflow-x: hidden;
+    font-size: 18px;
+    font-weight: 600;
+}
+h1 {
+    font-family: "Roboto Condensed", sans-serif;
+    color: #333333;
+}
+.card {
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    transition: scale 0.3s ease-out;
+}
+.card:hover{
+    scale: 1.02;
+}
+img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}  
+.model__outer{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease-out;
+}
+.model__inner{
+    height: 80%;
+    width: 60%;
+    background-color: #d4d4d4;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+svg{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.model__inner img{
+    object-fit: cover;
+    object-position: center;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 50%;
+    flex-basis: 50%;
+}
+.description{
+    text-align: start;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    flex-basis: 50%;
+    color: #2C2C54;
+    display: none;
+}
+.description *{
+    margin-bottom: 30px;
+}
+.open{
+    opacity: 1;
+}
+.whenopen{
+    pointer-events: all;
+}
+.visible {
+    display: block;
+}
+@media (max-width: 768px) {
+    body{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        font-size: 14px;
+    }
+    h1{
+        font-size: 22px;
+        font-weight: 600;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+@media (max-width: 425px) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        font-size: 10px;
+        font-weight: 400;
+    }
+}
