@@ -117,4 +117,8 @@ svg{
         font-size: 10px;
         font-weight: 400;
     }
+    .model__inner{
+        height: 70%;
+        width: 100%;
+    }
 }
