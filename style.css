@@ -91,6 +91,7 @@ svg{
     flex-basis: 50%;
     color: #2C2C54;
     display: none;
+    opacity: 0;
 }
 .description *{
     margin-bottom: 30px;
