@@ -13,7 +13,7 @@ allCards.forEach(function(card){
         let description = card.querySelector('.description').innerHTML;
         let html = `
         <img src="${imagesrc}">
-        <div class="description visible">
+        <div class="description visible open">
                 ${description}
             </div>`;
         outerInner.insertAdjacentHTML('afterbegin', html);
